@@ -25,6 +25,19 @@ $(document).ready(function () {
     $(".menu").toggleClass("active");
   });
 
+
+
+  $('.tab').click(function(){
+    var tabId = $(this).attr('data-category');
+    
+    // Highlight the active tab
+    $('.tab').removeClass('active-tab');
+    $(this).addClass('active-tab');
+    
+    // Show the content related to the clicked tab
+    $('.tab-content').hide();
+    $('#' + tabId).show();
+});
 // // Initially hide all items beyond the first three in each category
 // $(".category").each(function() {
 //   $(this).find(".stat-item:gt(2)").hide(); // Hide items greater than the index of 2 (i.e., hide starting from the fourth item)

@@ -1208,3 +1208,12 @@ pattern as above, specifying full hierarchy for each nested level. */
     margin-bottom: 40px;
   }
 }
+
+
+/*Tabs Moati Diley*/
+.tabes {
+  padding: 20px;
+}
+.tabes .dashboard-header{
+  background-color: transparent;
+}
