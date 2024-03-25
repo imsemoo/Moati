@@ -179,9 +179,11 @@ select {
   padding: 15px 0;
   background: #fff;
 }
+
 .menu-toggle {
   display: none;
 }
+
 .container-navbar {
   grid-gap: 40px;
 }
@@ -231,7 +233,6 @@ select {
   /* A light border color */
 }
 
-
 .search-overlay {
   position: fixed;
   top: 0;
@@ -239,8 +240,10 @@ select {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  z-index: 1050; /* Ensure it's above other content */
-  display: none; /* Initially hidden */
+  z-index: 1050;
+  /* Ensure it's above other content */
+  display: none;
+  /* Initially hidden */
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -248,28 +251,34 @@ select {
 
 .search-overlay-content {
   text-align: center;
-  margin: 20px auto; /* Adjusted for simplicity and spacing */
-  max-width: 90%; /* Ensure content is not too wide */
-  overflow-y: auto; /* Allows scrolling within the overlay if content is too long */
-  max-height: 80%; /* Limits the height of the content area */
+  margin: 20px auto;
+  /* Adjusted for simplicity and spacing */
+  max-width: 90%;
+  /* Ensure content is not too wide */
+  overflow-y: auto;
+  /* Allows scrolling within the overlay if content is too long */
+  max-height: 80%;
+  /* Limits the height of the content area */
 }
-
 
 .search-overlay .search-box {
   margin: 100px auto;
   padding: 10px;
   width: 80%;
-  max-width: 600px; /* Adjust based on your preference */
+  max-width: 600px;
+  /* Adjust based on your preference */
   position: relative;
 }
+
 .search-overlay .search-box .search-icon {
   position: relative;
-    left: 35px;
+  left: 35px;
   color: var(--main-color);
-
 }
+
 .search-overlay .search-box input {
-  width: calc(100% - 40px); /* Adjust input width */
+  width: calc(100% - 40px);
+  /* Adjust input width */
   padding: 10px;
   background-color: #eee;
   border: 1px solid var(--border-color);
@@ -280,50 +289,67 @@ select {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  color: var(--main-color); /* Or any other color */
-  font-size: 30px; /* Adjust size as needed */
+  color: var(--main-color);
+  /* Or any other color */
+  font-size: 30px;
+  /* Adjust size as needed */
 }
-.toggle-search i{
+
+.toggle-search i {
   color: var(--main-color);
 }
+
 .search-results {
   width: 100%;
-  max-width: 800px; /* Adjust based on your preference */
+  max-width: 800px;
+  /* Adjust based on your preference */
   margin: 20px auto;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Space between cards */
+  gap: 15px;
+  /* Space between cards */
 }
 
 .horizontal-card {
   display: flex;
   align-items: center;
   background-color: #fff;
-  border: 1px solid #ddd; /* Light border for the card */
-  border-radius: 8px; /* Optional: rounded corners */
-  overflow: hidden; /* Ensures content fits within the borders */
+  border: 1px solid #ddd;
+  /* Light border for the card */
+  border-radius: 8px;
+  /* Optional: rounded corners */
+  overflow: hidden;
+  /* Ensures content fits within the borders */
 }
 
 .card-image {
-  width: 150px; /* Adjust based on your image size */
-  height: 100px; /* Adjust based on your image size */
-  object-fit: cover; /* Ensures the image covers the area without stretching */
+  width: 150px;
+  /* Adjust based on your image size */
+  height: 100px;
+  /* Adjust based on your image size */
+  object-fit: cover;
+  /* Ensures the image covers the area without stretching */
 }
 
 .card-content {
   padding: 10px;
-  flex-grow: 1; /* Ensures content takes up remaining space */
+  flex-grow: 1;
+  /* Ensures content takes up remaining space */
 }
 
 .card-title {
   margin: 0;
-  font-size: 18px; /* Adjust based on your design */
-  color: var(--main-color); /* Theme color for the title */
+  font-size: 18px;
+  /* Adjust based on your design */
+  color: var(--main-color);
+  /* Theme color for the title */
 }
 
 .card-description {
-  font-size: 14px; /* Adjust based on your design */
-  color: #666; /* Light text color for the description */
+  font-size: 14px;
+  /* Adjust based on your design */
+  color: #666;
+  /* Light text color for the description */
 }
 
 /* Responsive adjustments */
@@ -332,9 +358,11 @@ select {
     width: 100px;
     height: auto;
   }
+
   .container-navbar {
     align-items: flex-start;
   }
+
   .navbar .menu {
     position: absolute;
     top: 75px;
@@ -346,9 +374,11 @@ select {
     z-index: 99;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
+
   .navbar .menu.active {
     display: block;
   }
+
   .menu.active ul {
     grid-gap: 0;
   }
@@ -357,32 +387,41 @@ select {
     font-size: 14px;
     border-bottom: 1px solid #eee;
   }
+
   .menu ul {
     flex-direction: column;
-    display: none; /* Hide by default on smaller screens */
-    width: 100%; /* Full width */
+    display: none;
+    /* Hide by default on smaller screens */
+    width: 100%;
+    /* Full width */
   }
 
   .menu li a {
-    display: block; /* Stack the links */
+    display: block;
+    /* Stack the links */
     width: 100%;
   }
 
   .menu.active ul {
-    display: flex; /* Show menu when active */
+    display: flex;
+    /* Show menu when active */
   }
 
   .search {
-    width: 100%; /* Full width for the search bar */
+    width: 100%;
+    /* Full width for the search bar */
   }
+
   .container-navbar {
     grid-gap: 30px;
   }
+
   .search-input {
     width: 100%;
     padding: 7px 18px 7px 35px;
   }
 }
+
 /* Start Header*/
 .header {
   padding: 20px 0;
@@ -478,12 +517,14 @@ select {
   grid-gap: 5px;
   text-wrap: nowrap;
 }
+
 .custom-checkbox label {
   margin-bottom: 0;
   display: flex;
   align-items: center;
   grid-gap: 5px;
 }
+
 .custom-checkbox-group {
   display: flex;
   flex-flow: wrap;
@@ -540,15 +581,16 @@ select {
   text-align: center;
   flex-direction: column;
   width: 100%;
-  /*Adjustwidthfortwocolumns*/font-size: 15px;
+  /*Adjustwidthfortwocolumns*/
+  font-size: 15px;
   font-weight: bold;
   color: var(--neutral-dark);
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-
 }
+
 /* .statistics .stat-item.hidden{
   display: none;
 }
@@ -556,11 +598,11 @@ select {
 display: flex !important;
 
 } */
-.statistics  .toggleItems {
+.statistics .toggleItems {
   margin: 20px auto 0;
   display: block;
-  
 }
+
 .statistics .icon {
   font-size: 24px;
   color: #fff;
@@ -579,9 +621,11 @@ display: flex !important;
     var(--secondary-color-3)
   );
 }
+
 .statistics .icon img {
   width: 40px;
 }
+
 .statistics .stat-count {
   font-size: 22px;
   line-height: 1;
@@ -589,6 +633,7 @@ display: flex !important;
   color: var(--neutral-dark);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .hidden {
   display: none;
 }
@@ -608,16 +653,20 @@ display: flex !important;
   font-size: 14px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 25px; /* Rounded corners */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  border-radius: 25px;
+  /* Rounded corners */
+  /* Shadow for depth */
   transition: box-shadow 0.2s ease-in-out;
   max-width: 400px;
   margin: auto;
 }
+
 .primary-btn:hover {
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+  /* Slightly larger shadow on hover */
   background-image: linear-gradient(to left, #2d316c, #064c8c);
 }
+
 /* end statistics */
 
 /* Start News*/
@@ -668,9 +717,11 @@ display: flex !important;
   display: block;
   min-width: fit-content;
 }
+
 .news-section .news-content {
   padding: 15px;
-  text-align: right; /* For RTL languages like Arabic */
+  text-align: right;
+  /* For RTL languages like Arabic */
 }
 
 .news-section .news-title {
@@ -701,32 +752,45 @@ display: flex !important;
   -o-border-radius: 8px;
   margin: 0 0 40px;
 }
+
 .dashboard-header {
   border-bottom: 2px solid #eee;
   padding: 10px;
   text-align: center;
   background-color: #f9f9f9;
 }
-.tab {
+
+.dashboard-header .tab {
   display: inline-block;
   padding: 10px 20px;
   margin: 5px;
   border: 1px solid #ddd;
   cursor: pointer;
   background-color: #fff;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
+
 .tab.active {
   border-bottom: 2px solid var(--main-color);
 }
+
 .content {
   padding: 20px;
-  min-height: 150px; /* Adjust as needed */
-  background-image: url("path_to_your_dot_pattern.png"); /* Path to your dot pattern */
+  min-height: 150px;
+  /* Adjust as needed */
+  background-image: url("path_to_your_dot_pattern.png");
+  /* Path to your dot pattern */
 }
+
 .content-header {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .chart-container {
   /* max-height: 400px; */
   position: relative;
@@ -753,22 +817,26 @@ display: flex !important;
   padding: 10px;
   margin: 0 0 20px 0;
 }
+
 .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
 }
+
 .calendar-header h2 {
   margin: 0;
   font-size: 15px;
   color: var(--neutral-dark);
 }
+
 .calendar-container .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 5px;
 }
+
 .calendar-container .day {
   border: 1px solid var(--border-color);
   padding: 6px;
@@ -804,6 +872,7 @@ display: flex !important;
   top: -5px;
   left: -5px;
 }
+
 .calendar-container .side-panel {
   position: absolute;
   top: 0;
@@ -815,18 +884,23 @@ display: flex !important;
   transition: 0.5s;
   padding-top: 60px;
   border-right: 1px solid var(--border-color);
-  z-index: 2; /* تعديلات لتتماشى مع الاتجاه من اليمين إلى اليسار */
+  z-index: 2;
+  /* تعديلات لتتماشى مع الاتجاه من اليمين إلى اليسار */
 }
+
 .calendar-container .side-panel-content {
   padding: 20px;
 }
+
 .calendar-container .close-btn {
   position: absolute;
   top: 20px;
   left: 25px;
   font-size: 30px;
-  cursor: pointer; /* تعديلات لتتماشى مع الاتجاه من اليمين إلى اليسار */
+  cursor: pointer;
+  /* تعديلات لتتماشى مع الاتجاه من اليمين إلى اليسار */
 }
+
 .calendar-container .btn {
   font-size: 14px;
   margin: 0;
@@ -839,15 +913,16 @@ display: flex !important;
   background-color: var(--neutral-light);
   color: var(--neutral-dark);
 }
+
 .calendar-container .day.active {
   background: linear-gradient(
     to right,
     var(--main-color),
     var(--secondary-color-1)
-  ); 
-  color: white; 
-  font-weight: bold; 
-  border: 1px solid var(--border-color); 
+  );
+  color: white;
+  font-weight: bold;
+  border: 1px solid var(--border-color);
 }
 
 /*Css calendar*/
@@ -865,29 +940,36 @@ display: flex !important;
   overflow: hidden;
   border-radius: 8px;
 }
+
 .owl-martyrs .item img {
   display: block;
   width: 100%;
   height: auto;
 }
+
 .owl-martyrs .overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* خلفية شفافة */
+  background: rgba(0, 0, 0, 0.6);
+  /* خلفية شفافة */
   color: #fff;
   width: 100%;
-  text-align: center; /* يمكنك تغييره إلى center إذا أردت */
+  text-align: center;
+  /* يمكنك تغييره إلى center إذا أردت */
   padding: 10px;
 }
+
 /* تحسين تنسيق النصوص داخل الـ overlay */
 .owl-martyrs .overlay h3 {
   font-size: 1.5em;
   margin-bottom: 0.5em;
 }
+
 .owl-martyrs .overlay p {
   margin-bottom: 0.3em;
   font-size: 1em;
 }
+
 /* تنسيق خاص بتاريخ الاستشهاد */
 .owl-martyrs .overlay .martyrdom-date {
   font-weight: bold;
@@ -900,27 +982,33 @@ display: flex !important;
   border-radius: 8px;
   margin: 0 0 20px 0;
 }
+
 .owl-report .item {
   position: relative;
 
   overflow: hidden;
   border-radius: 8px;
 }
+
 .owl-report .item img {
   display: block;
   width: 100%;
   height: auto;
 }
+
 .owl-report .report-item {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
 }
+
 .owl-report .report-item img {
   width: 100%;
-  height: 200px; /* Adjust height as needed */
+  height: 200px;
+  /* Adjust height as needed */
   object-fit: cover;
 }
+
 .owl-report .category-tag {
   position: absolute;
   top: 10px;
@@ -931,22 +1019,27 @@ display: flex !important;
   border-radius: 5px;
   font-size: 0.8em;
 }
+
 .report-content {
   padding: 20px;
 }
+
 .report-date {
   color: #666;
   font-size: 0.9em;
 }
+
 .report-title {
   color: var(--neutral-dark);
   font-weight: bold;
   margin: 10px 0;
 }
+
 .report-description {
   font-size: 0.9em;
   margin-bottom: 20px;
 }
+
 .report-content .read-more {
   color: #fff;
   padding: 7px 14px;
@@ -978,8 +1071,10 @@ display: flex !important;
   content: "";
   position: absolute;
   height: 2px;
-  background-color: #777; /* Lighter or contrasting color */
-  width: 50%; /* Adjust width as necessary */
+  background-color: #777;
+  /* Lighter or contrasting color */
+  width: 50%;
+  /* Adjust width as necessary */
   top: 0;
 }
 
@@ -1020,11 +1115,13 @@ display: flex !important;
 
 .social-icons i {
   color: white;
-  font-size: 24px; /* Adjust the size of the icons as needed */
+  font-size: 24px;
+  /* Adjust the size of the icons as needed */
 }
 
 .footer-bottom {
-  border-top: 1px solid #444; /* Slightly lighter than the footer bg */
+  border-top: 1px solid #444;
+  /* Slightly lighter than the footer bg */
   padding-top: 20px;
   text-align: center;
   margin-top: 20px;
@@ -1044,11 +1141,14 @@ display: flex !important;
 /* Adjustments for shapes and additional decorations */
 /* Example to add a decorative icon or shape after the copyright text */
 .footer-bottom p::after {
-  content: "\f1e0"; /* FontAwesome icon example, adjust as needed */
-  font-family: "Font Awesome 5 Free"; /* Ensure you have FontAwesome loaded */
+  content: "\f1e0";
+  /* FontAwesome icon example, adjust as needed */
+  font-family: "Font Awesome 5 Free";
+  /* Ensure you have FontAwesome loaded */
   font-weight: 900;
   margin-left: 10px;
-  color: white; /* Adjust color as needed */
+  color: white;
+  /* Adjust color as needed */
 }
 
 .swiper-container {
@@ -1150,16 +1250,19 @@ pattern as above, specifying full hierarchy for each nested level. */
 .swiper-content .copy {
   padding: 20px;
 }
+
 .swiper-content .copy h3 {
   font-size: 16px;
   color: #333;
   margin-bottom: 10px;
 }
+
 .swiper-content .copy p {
   font-size: 0.9em;
   color: #666;
   margin-bottom: 15px;
 }
+
 .swiper-content .footer {
   position: absolute;
   bottom: 0;
@@ -1177,8 +1280,10 @@ pattern as above, specifying full hierarchy for each nested level. */
 .content-card {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: calc(33.333% - 20px); /* Adjust width as needed */
-  height: auto; /* Adjust based on content */
+  width: calc(33.333% - 20px);
+  /* Adjust width as needed */
+  height: auto;
+  /* Adjust based on content */
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1189,59 +1294,63 @@ pattern as above, specifying full hierarchy for each nested level. */
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .statistics .stat-item {
     width: 100%;
   }
+
   .statistics {
     margin-bottom: 40px;
   }
+
   .header > .container > .row > .col-md-3 {
     height: auto;
   }
- 
+
   .content-card {
     width: 100%;
     margin-bottom: 20px;
   }
+
   .silder {
     margin-top: 20px;
     margin-bottom: 40px;
   }
 }
 
-
 /*Tabs Moati Diley*/
 .tabes {
   padding: 20px;
 }
-.tabes .dashboard-header{
+
+.tabes .dashboard-header {
   background-color: transparent;
 }
-
 
 #eventsTable {
   width: 100%;
   border-collapse: collapse;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* إضافة ظل خفيف للجدول */
-  margin-top: 20px; /* تحديد هامش علوي */
-  border-radius: 8px; /* جعل حواف الجدول مدورة */
-  overflow: hidden; /* لتطبيق التدوير على حواف الجدول */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-#eventsTable th, #eventsTable td {
+#eventsTable th,
+#eventsTable td {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
-  font-size: 0.9em; /* تصغير حجم الخط قليلاً */
+  text-align: center;
+  font-size: 0.9em;
 }
 
 #eventsTable th {
-  background-color: #f4f4f4; /* تغيير لون خلفية العناوين */
-  color: #333; /* تغيير لون النص للعناوين */
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .eventDescription {
-  max-width: 250px; /* التحكم في عرض الوصف */
+  max-width: 250px;
+  /* التحكم في عرض الوصف */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1252,15 +1361,104 @@ pattern as above, specifying full hierarchy for each nested level. */
   color: white;
   border: none;
   cursor: pointer;
-  padding: 5px 10px; /* تحديد الحشو لجعل الزر أكثر جاذبية */
-  border-radius: 5px; /* مدور حواف الزر */
+  padding: 5px 10px;
+  /* تحديد الحشو لجعل الزر أكثر جاذبية */
+  border-radius: 5px;
+  /* مدور حواف الزر */
 }
-.table-responsive{
+
+.table-responsive {
   background-color: #fff;
-  padding: 20px;
+  padding: 40px 30px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+.tabes .dashboard-header {
+  border: none;
+}
+
+#filters {
+  margin-bottom: 20px;
+}
+
+#searchInput,
+#categoryFilter {
+  padding: 10px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#searchInput {
+  width: 300px;
+}
+
+#categoryFilter {
+  width: 200px;
+}
+
+#filterButton {
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: none;
+}
+
+#filters_table {
+  margin-bottom: 20px;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px; /* Adjusts space above the dots */
+}
+
+.owl-dot {
+  display: inline-block;
+  margin: 0 5px; /* Space between dots */
+}
+
+.owl-dot span {
+  display: block;
+  width: 12px; /* Dot size */
+  height: 12px; /* Dot size */
+  background-color: #aaa; /* Dot color */
+  border-radius: 50%; /* Makes the dot circular */
+  cursor: pointer;
+}
+
+.owl-dot.active span {
+  background-color: var(--secondary-color-1);
+}
+.slider-images {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin-bottom: 40px;
+}
+.slider-images .header-slider .title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: var(--neutral-dark);
+}
+
+.slider-images .item {
+  border-radius: 8px;
+  overflow: hidden;
 }

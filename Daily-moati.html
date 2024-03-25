@@ -81,7 +81,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="dashboard-header">
-                            <div class="tab" id="tab3" data-category="resistanceHarvest">حصاد المقاومة</div>
+                            <div class="tab active" id="tab3" data-category="resistanceHarvest">حصاد المقاومة</div>
                             <div class="tab" id="tab1" data-category="violations">الانتهاكات</div>
                             <div class="tab" id="tab2" data-category="crimes">الجرائم</div>
                         </div>
@@ -223,10 +223,80 @@
                             <!-- Category: حصاد المقاومة -->
                             <div class="tab-content" id="resistanceHarvest" style="">
                                 <div class="category ">
-        
-        
                                     <h2 class="category-title">حصاد المقاومة</h2>
                                     <div class="stats">
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/knife.png" alt="">
+                                            </div>
+                                            عمليات الطعن <span class="stat-count">20</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/grenade.png" alt="">
+                                            </div>
+                                            تفجير عبوات <span class="stat-count">15</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/soldier.png" alt="">
+                                            </div>
+                                            عدد الاسري<span class="stat-count">450</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/atomic-bomb.png" alt="">
+                                            </div>
+                                            رشقات صاروخيه <span class="stat-count">650</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/knife.png" alt="">
+                                            </div>
+                                            عمليات الطعن <span class="stat-count">20</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/grenade.png" alt="">
+                                            </div>
+                                            تفجير عبوات <span class="stat-count">15</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/soldier.png" alt="">
+                                            </div>
+                                            عدد الاسري<span class="stat-count">450</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/atomic-bomb.png" alt="">
+                                            </div>
+                                            رشقات صاروخيه <span class="stat-count">650</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/knife.png" alt="">
+                                            </div>
+                                            عمليات الطعن <span class="stat-count">20</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/grenade.png" alt="">
+                                            </div>
+                                            تفجير عبوات <span class="stat-count">15</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/soldier.png" alt="">
+                                            </div>
+                                            عدد الاسري<span class="stat-count">450</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="icon">
+                                                <img src="images/atomic-bomb.png" alt="">
+                                            </div>
+                                            رشقات صاروخيه <span class="stat-count">650</span>
+                                        </div>
                                         <div class="stat-item">
                                             <div class="icon">
                                                 <img src="images/knife.png" alt="">
@@ -358,7 +428,21 @@
 
                     </div>
                     <div class="col-md-12">
+                        
+                        
                        <div class="table-responsive">
+                        <div id="filters_table">
+                            <input type="text" id="searchInput" placeholder="بحث...">
+                            <select id="categoryFilter">
+                                <option value="">اختر تصنيف...</option>
+                                <option value="تاريخي">تاريخي</option>
+                                <option value="ثقافي">ثقافي</option>
+                                <option value="تعليمي">تعليمي</option>
+                                <option value="رياضي">رياضي</option>
+                                <option value="سياسي">سياسي</option>
+                            </select>
+                            <button id="filterButton" class="primary-btn">فلتر</button> <!-- زر الفلتر -->
+                        </div>
                         <table id="eventsTable">
                             <thead>
                                 <tr>
@@ -378,14 +462,50 @@
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>الأحد</td>
-                                    <td>25/03/2024</td>
+                                    <td>الإثنين</td>
+                                    <td>22/03/2024</td>
+                                    <td>تاريخي</td>
+                                    <td>إحياء</td>
+                                    <td>القدس</td>
+                                    <td>البلدة القديمة</td>
+                                    <td>المسجد الأقصى</td>
+                                    <td class="eventDescription">إحياء الذكرى السنوية للإسراء والمعراج، حيث يتم تنظيم مسيرات وفعاليات تعبيرية...</td>
+                                    <td><button class="showMore primary-btn">عرض المزيد</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>الجمعة</td>
+                                    <td>26/03/2024</td>
                                     <td>ثقافي</td>
                                     <td>معرض</td>
-                                    <td>القاهرة</td>
-                                    <td>وسط البلد</td>
-                                    <td>مكتبة القاهرة الكبرى</td>
-                                    <td class="eventDescription">هذا وصف مختصر للحدث، ويمكن أن يكون طويلًا جدًا لدرجة أننا نحتاج إلى إخفاء جزء منه...</td>
+                                    <td>غزة</td>
+                                    <td>الشجاعية</td>
+                                    <td>مركز الثقافة</td>
+                                    <td class="eventDescription">معرض للصور يوثق الحياة اليومية في غزة، مع التركيز على جوانب الصمود والأمل...</td>
+                                    <td><button class="showMore primary-btn">عرض المزيد</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>الأربعاء</td>
+                                    <td>24/03/2024</td>
+                                    <td>تعليمي</td>
+                                    <td>ورشة عمل</td>
+                                    <td>نابلس</td>
+                                    <td>المدينة</td>
+                                    <td>جامعة النجاح</td>
+                                    <td class="eventDescription">ورشة عمل حول تطوير المهارات الرقمية للطلاب، بمشاركة خبراء في التكنولوجيا...</td>
+                                    <td><button class="showMore primary-btn">عرض المزيد</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>السبت</td>
+                                    <td>27/03/2024</td>
+                                    <td>رياضي</td>
+                                    <td>ماراثون</td>
+                                    <td>رام الله</td>
+                                    <td>المركز</td>
+                                    <td>شوارع المدينة</td>
+                                    <td class="eventDescription">ماراثون سنوي يشمل مشاركين من جميع الأعمار، يهدف لدعم الأطفال المحتاجين...</td>
                                     <td><button class="showMore primary-btn">عرض المزيد</button></td>
                                 </tr>
                                 <!-- يمكنك إضافة المزيد من الصفوف هنا -->
@@ -397,6 +517,41 @@
 
                     </div>
 
+                    <div class="col-md-12">
+                        <div class="slider-images">
+
+                            <div class="header-slider">
+                                <h2 class="title">
+                                    مستعرض الصور 
+                                </h2>
+                            </div>
+                            <div class="owl-carousel owl-images owl-theme">
+                                <div class="item">
+                                    <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" alt="">
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
 
 
                 </div>

@@ -25,51 +25,68 @@ $(document).ready(function () {
     $(".menu").toggleClass("active");
   });
 
+  $(".tab").click(function () {
+    var tabId = $(this).attr("data-category");
 
-
-  $('.tab').click(function(){
-    var tabId = $(this).attr('data-category');
-    
     // Highlight the active tab
-    $('.tab').removeClass('active-tab');
-    $(this).addClass('active-tab');
-    
+    $(".tab").removeClass("active-tab");
+    $(this).addClass("active-tab");
+
     // Show the content related to the clicked tab
-    $('.tab-content').hide();
-    $('#' + tabId).show();
-});
+    $(".tab-content").hide();
+    $("#" + tabId).show();
+  });
 
+  $(".showMore").click(function () {
+    var $this = $(this);
+    var $description = $this.closest("tr").find(".eventDescription");
 
-$('.showMore').click(function(){
-  var $this = $(this);
-  var $description = $this.closest('tr').find('.eventDescription');
-
-  if ($this.hasClass('expanded')) {
+    if ($this.hasClass("expanded")) {
       // إخفاء النص
-      $description.css('white-space', 'nowrap');
-      $this.text('عرض المزيد');
-  } else {
+      $description.css("white-space", "nowrap");
+      $this.text("عرض المزيد");
+    } else {
       // عرض النص بالكامل
-      $description.css('white-space', 'normal');
-      $this.text('عرض أقل');
-  }
+      $description.css("white-space", "normal");
+      $this.text("عرض أقل");
+    }
 
-  $this.toggleClass('expanded');
-});
-// // Initially hide all items beyond the first three in each category
-// $(".category").each(function() {
-//   $(this).find(".stat-item:gt(2)").hide(); // Hide items greater than the index of 2 (i.e., hide starting from the fourth item)
-// });
+    $this.toggleClass("expanded");
+  });
 
-// // Toggle visibility when the button is clicked
-// $(".toggleItems").click(function() {
-//   // This finds the closest parent category and then toggles the visibility of items beyond the first three
-//   $(this).closest(".category").find(".stat-item:gt(2)").toggleClass('visible');
+  $("#searchInput, #categoryFilter").on("keyup change", function () {
+    var searchVal = $("#searchInput").val().toLowerCase();
+    var categoryVal = $("#categoryFilter").val();
 
-//   // Toggle button text
-//   var buttonText = $(this).text() == "عرض المزيد" ? "عرض أقل" : "عرض المزيد";
-//   $(this).text(buttonText);
-// });
+    $("#filterButton").click(function () {
+      // تغيير الحدث ليكون عند النقر على الزر
+      var searchVal = $("#searchInput").val().toLowerCase();
+      var categoryVal = $("#categoryFilter").val();
+
+      $("#eventsTable tbody tr").filter(function () {
+        var textMatch = $(this).text().toLowerCase().indexOf(searchVal) > -1;
+        var categoryMatch =
+          categoryVal === "" ||
+          $(this).find("td:nth-child(4)").text() === categoryVal;
+        $(this).toggle(textMatch && categoryMatch);
+      });
+    });
+  });
+
+  // // Initially hide all items beyond the first three in each category
+  // $(".category").each(function() {
+  //   $(this).find(".stat-item:gt(2)").hide(); // Hide items greater than the index of 2 (i.e., hide starting from the fourth item)
+  // });
+
+  // // Toggle visibility when the button is clicked
+  // $(".toggleItems").click(function() {
+  //   // This finds the closest parent category and then toggles the visibility of items beyond the first three
+  //   $(this).closest(".category").find(".stat-item:gt(2)").toggleClass('visible');
+
+  //   // Toggle button text
+  //   var buttonText = $(this).text() == "عرض المزيد" ? "عرض أقل" : "عرض المزيد";
+  //   $(this).text(buttonText);
+  // });
 
   // jQuery for tab switching (if required)
   $(".tab").on("click", function () {
@@ -120,4 +137,26 @@ $('.showMore').click(function(){
     // Hide the search overlay
     $(".search-overlay").hide();
   });
+
+
+  $('.owl-images').owlCarousel({
+    rtl:true,
+
+    margin: 40,
+    nav: false,
+    autoplay: true,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  })
+
 });
