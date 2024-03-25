@@ -549,6 +549,7 @@ select {
   gap: 10px;
   margin: auto;
   flex-flow: column nowrap;
+  margin-bottom: 40px;
 }
 
 .statistics .category {
@@ -932,6 +933,8 @@ display: flex !important;
   background: #ffffff;
   overflow: hidden;
   border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .owl-martyrs .item {
@@ -1574,4 +1577,13 @@ pattern as above, specifying full hierarchy for each nested level. */
   }
   .slider-images {
     padding: 20px 0;}
+
+    #myChart{
+      width: 300px !important; 
+    }
+    .container-icons-nav{
+      display: flex;
+      grid-gap: 40px;
+      align-items: center;
+    }
 }
