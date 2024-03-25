@@ -1217,3 +1217,50 @@ pattern as above, specifying full hierarchy for each nested level. */
 .tabes .dashboard-header{
   background-color: transparent;
 }
+
+
+#eventsTable {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* إضافة ظل خفيف للجدول */
+  margin-top: 20px; /* تحديد هامش علوي */
+  border-radius: 8px; /* جعل حواف الجدول مدورة */
+  overflow: hidden; /* لتطبيق التدوير على حواف الجدول */
+}
+
+#eventsTable th, #eventsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 0.9em; /* تصغير حجم الخط قليلاً */
+}
+
+#eventsTable th {
+  background-color: #f4f4f4; /* تغيير لون خلفية العناوين */
+  color: #333; /* تغيير لون النص للعناوين */
+}
+
+.eventDescription {
+  max-width: 250px; /* التحكم في عرض الوصف */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.showMore {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px; /* تحديد الحشو لجعل الزر أكثر جاذبية */
+  border-radius: 5px; /* مدور حواف الزر */
+}
+.table-responsive{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}

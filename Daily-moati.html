@@ -341,7 +341,7 @@
         <main>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <div class="dashboard">
 
 
@@ -357,8 +357,42 @@
 
 
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-12">
+                       <div class="table-responsive">
+                        <table id="eventsTable">
+                            <thead>
+                                <tr>
+                                    <th>الرقم</th>
+                                    <th>اليوم</th>
+                                    <th>التاريخ</th>
+                                    <th>تصنيف الحدث</th>
+                                    <th>نوع الحدث</th>
+                                    <th>المحافظة</th>
+                                    <th>البلدة</th>
+                                    <th>المكان</th>
+                                    <th>وصف الحدث</th>
+                                    <th>عرض المزيد</th>
+                                </tr>
+                            </thead>
 
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>الأحد</td>
+                                    <td>25/03/2024</td>
+                                    <td>ثقافي</td>
+                                    <td>معرض</td>
+                                    <td>القاهرة</td>
+                                    <td>وسط البلد</td>
+                                    <td>مكتبة القاهرة الكبرى</td>
+                                    <td class="eventDescription">هذا وصف مختصر للحدث، ويمكن أن يكون طويلًا جدًا لدرجة أننا نحتاج إلى إخفاء جزء منه...</td>
+                                    <td><button class="showMore primary-btn">عرض المزيد</button></td>
+                                </tr>
+                                <!-- يمكنك إضافة المزيد من الصفوف هنا -->
+                            </tbody>
+                            
+                        </table>
+                       </div>
 
 
                     </div>

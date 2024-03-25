@@ -38,6 +38,24 @@ $(document).ready(function () {
     $('.tab-content').hide();
     $('#' + tabId).show();
 });
+
+
+$('.showMore').click(function(){
+  var $this = $(this);
+  var $description = $this.closest('tr').find('.eventDescription');
+
+  if ($this.hasClass('expanded')) {
+      // إخفاء النص
+      $description.css('white-space', 'nowrap');
+      $this.text('عرض المزيد');
+  } else {
+      // عرض النص بالكامل
+      $description.css('white-space', 'normal');
+      $this.text('عرض أقل');
+  }
+
+  $this.toggleClass('expanded');
+});
 // // Initially hide all items beyond the first three in each category
 // $(".category").each(function() {
 //   $(this).find(".stat-item:gt(2)").hide(); // Hide items greater than the index of 2 (i.e., hide starting from the fourth item)
