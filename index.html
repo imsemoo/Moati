@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.rtl.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <title>Home</title>
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="container-navbar d-flex align-items-center justify-content-between">
+                            <div class="logo">
+                                <img src="images/logo.png" alt="Company Logo" width="150" height="75" loading="lazy">
+                            </div>
+        
+                            <div class="menu">
+                                <ul>
+                                    <li><a href="#">الرئيسية</a></li>
+                                    <li><a href="https://palqura.com/">القرى الفلسطينية</a></li>
+                                    <li><a href="https://www.shireen.ps/">مرصد شيرين</a></li>
+                                </ul>
+                            </div>
+                            <div class="toggle-search">
+                                <i class="fas fa-search fa-lg"></i>
+
+                            </div>
+                       
+                              
+                            <!-- <div class="search">
+                                <input type="search" placeholder="بحث..." class="search-input">
+                                <i class="fas fa-search search-icon"></i>
+                            </div> -->
+                            <!-- Add this inside your .container-navbar div -->
+                            <div class="menu-toggle">
+                                <i class="fas fa-bars"></i> <!-- Example icon, adjust as needed -->
+                            </div>
+        
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="search-overlay">
+                            <div class="search-overlay-content">
+                                <img src="images/logo.png" alt="Company Logo" width="150" height="75" loading="lazy">
+                                <div class="search-box">
+                                    <input type="search" placeholder="بحث..." class="search-input">
+                                    <i class="fas fa-search search-icon"></i>
+                                </div>
+                                <i class="fas fa-times exit-icon"></i>
+                            </div>
+                            <div class="search-results">
+                                <div class="horizontal-card">
+                                  <img src="https://dummyimage.com/400x250/d9d9d9/000000.png" alt="Sample Image" class="card-image">
+                                  <div class="card-content">
+                                    <h3 class="card-title">Card Title</h3>
+                                    <p class="card-description">This is a sample description for your horizontal card. It can contain details about the search result.</p>
+                                  </div>
+                                </div>
+                                <!-- Repeat for as many cards as needed -->
+                              </div>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="filter-sidebar">
+                            <div class="topbar">
+                                <img src="images/filter.png" alt="" width="20">
+                                <h4>
+                                    البحث وتصفية النتائج
+                                </h4>
+        
+                            </div>
+                            <div class="filter-group">
+                                <input type="checkbox" id="category1" class="filter-toggle">
+                                <label for="category1" class="filter-title"><i class="fa-solid fa-chevron-down"></i>
+                                    الفترة الزمنية</label>
+                                <div class="filter-content">
+                                    <div class="form-area">
+                                        <label for="month-select">اختر الشهر:</label>
+                                        <select name="month" id="month-select">
+                                            <option value="1">يناير</option>
+                                            <option value="2">فبراير</option>
+                                            <option value="3">مارس</option>
+                                            <option value="4">أبريل</option>
+                                            <option value="5">مايو</option>
+                                            <option value="6">يونيو</option>
+                                            <option value="7">يوليو</option>
+                                            <option value="8">أغسطس</option>
+                                            <option value="9">سبتمبر</option>
+                                            <option value="10">أكتوبر</option>
+                                            <option value="11">نوفمبر</option>
+                                            <option value="12">ديسمبر</option>
+                                        </select>
+                                    </div>
+        
+                                </div>
+                            </div>
+        
+                            <div class="filter-group">
+                                <input type="checkbox" id="category2" class="filter-toggle">
+                                <label for="category2" class="filter-title"><i class="fa-solid fa-chevron-down"></i> بحث
+                                    حسب الاسم</label>
+                                <div class="filter-content">
+                                    <div class="form-area">
+                                        <label for="">ادخل اسم الشهيد </label>
+                                        <input type="text" name="" id="" placeholder="ادخل اسم الشهيد ">
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="filter-group">
+                                <input type="checkbox" id="category3" class="filter-toggle">
+                                <label for="category3" class="filter-title"><i class="fa-solid fa-chevron-down"></i> حسب
+                                    الاعلان من الجهات الرسمية</label>
+                                <div class="filter-content">
+                                    <div class="d-flex">
+        
+                                        <div class="form-area">
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="myCheckbox" />
+                                                <label for="myCheckbox"> معلن </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-area">
+                                            <div class="custom-checkbox">
+                                                <input type="checkbox" id="myCheckbox" />
+                                                <label for="myCheckbox">غير معلن </label>
+                                            </div>
+                                        </div>
+        
+        
+                                    </div>
+                                    <p class="description-checkbox">
+                                        ملاحظة: الشهداء غير المعلن عنهم لا يتم احتسابهم في الارقام الاجمالية للشهداء
+                                        بشكل تلقائي
+                                    </p>
+                                </div>
+                            </div>
+        
+        
+                            <div class="filter-group">
+                                <input type="checkbox" id="category4" class="filter-toggle">
+                                <label for="category4" class="filter-title"><i class="fa-solid fa-chevron-down"></i> حسب
+                                    الفئة</label>
+                                <div class="filter-content">
+                                    <div class="custom-checkbox-group">
+                                        <div class="custom-checkbox">
+                                            <label>
+                                                <input type="checkbox" checked>
+                                                نساء
+                                                <span>(2792)</span>
+                                            </label>
+                                        </div>
+        
+                                        <div class="custom-checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                                أطفال
+                                                <span>(4319)</span>
+                                            </label>
+                                        </div>
+        
+                                        <div class="custom-checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                                مسنين
+                                                <span>(700)</span>
+                                            </label>
+                                        </div>
+        
+                                        <div class="custom-checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                                جميع الفئات
+                                                <span>(7880)</span>
+                                            </label>
+                                        </div>
+                                        <!-- Repeat for other checkboxes -->
+                                    </div>
+        
+                                </div>
+                            </div>
+        
+                            <!-- More filter groups -->
+                        </div>
+        
+                    </div>
+                    <div class="col-md-6">
+                        <section class="statistics">
+                             <!-- Category: حصاد المقاومة -->
+                             <div class="category ">
+                                <h2 class="category-title">حصاد المقاومة</h2>
+                                <div class="stats">
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/knife.png" alt="">
+                                        </div>
+                                        عمليات الطعن <span class="stat-count">20</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/grenade.png" alt="">
+                                        </div>
+                                        تفجير عبوات <span class="stat-count">15</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/soldier.png" alt="">
+                                        </div>
+                                        عدد الاسري<span class="stat-count">450</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/atomic-bomb.png" alt="">
+                                        </div>
+                                        رشقات صاروخيه <span class="stat-count">650</span>
+                                    </div>
+                                </div>
+                                <button class="toggleItems primary-btn">عرض المزيد</button>
+
+                            </div>
+                            <!-- Category: الانتهاكات -->
+                            <div class="category">
+                                <h2 class="category-title">الانتهاكات</h2>
+                                <div class="stats">
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/occupation.png" alt="">
+                                        </div>
+                                        مصادرة الممتلكات <span class="stat-count">1000</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/home.png" alt="">
+                                        </div>
+                                        هدم المنازل <span class="stat-count">500</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/handcuffs.png" alt="">
+                                        </div>
+                                        الاعتقالات <span class="stat-count">7619</span>
+                                    </div>
+                                    <div class="stat-item ">
+                                        <div class="icon">
+                                            <img src="images/walk.png" alt="">
+                                        </div>
+                                        مهجرين <span class="stat-count">32019</span>
+                                    </div>
+                                 
+                                </div>
+                                <button class="toggleItems primary-btn">عرض المزيد</button>
+
+                            </div>
+        
+                            <!-- Category: الجرائم -->
+                            <div class="category ">
+                                <h2 class="category-title">الجرائم</h2>
+                                <div class="stats">
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/death.png" alt="">
+                                        </div>
+                                        قتل اشبال <span class="stat-count">400</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/murder.png" alt="">
+                                        </div>
+                                        قتل نساء <span class="stat-count">500</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/person.png" alt="">
+                                        </div>
+                                        جرحي <span class="stat-count">45000</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="icon">
+                                            <img src="images/man.png" alt="">
+                                        </div>
+                                        هدم مساجد <span class="stat-count">20</span>
+                                    </div>
+                                </div>
+                                <button class="toggleItems primary-btn">عرض المزيد</button>
+
+                            </div>
+        
+                           
+        
+        
+                        </section>
+                    </div>
+        
+                    <div class="col-md-3">
+                        <div class="map">
+                            <canvas id="mapCanvas" width="280" height="740"></canvas>
+                        </div>
+
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="news-section">
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="https://dummyimage.com/500x350/d9d9d9/000000.png" alt="News Image Description">
+                                </div>
+                                <div class="news-date">
+                                    <i class="fas fa-calendar-alt"></i><span>12 أكتوبر 2022</span>
+        
+                                </div>
+                                <div class="news-content">
+                                    <h3 class="news-title">تقرير معطى السنوي لأعمال المقاومة في الضفة الغربية عام 2023
+                                    </h3>
+                                    <p class="news-summary">ملخص الخبر ووصف مختصر عن المحتوى...</p>
+                                    <button class="read-more primary-btn">اقرأ المزيد</button>
+                                </div>
+                            </div>
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="https://dummyimage.com/500x350/d9d9d9/000000.png" alt="News Image Description">
+                                </div>
+                                <div class="news-date">
+                                    <i class="fas fa-calendar-alt"></i><span>12 أكتوبر 2022</span>
+        
+                                </div>
+                                <div class="news-content">
+                                    <h3 class="news-title">تقرير معطى السنوي لأعمال المقاومة في الضفة الغربية عام 2023
+                                    </h3>
+                                    <p class="news-summary">ملخص الخبر ووصف مختصر عن المحتوى...</p>
+                                    <button class="read-more primary-btn">اقرأ المزيد</button>
+                                </div>
+                            </div>
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <img src="https://dummyimage.com/500x350/d9d9d9/000000.png" alt="News Image Description">
+                                </div>
+                                <div class="news-date">
+                                    <i class="fas fa-calendar-alt"></i><span>12 أكتوبر 2022</span>
+        
+                                </div>
+                                <div class="news-content">
+                                    <h3 class="news-title">تقرير معطى السنوي لأعمال المقاومة في الضفة الغربية عام 2023
+                                    </h3>
+                                    <p class="news-summary">ملخص الخبر ووصف مختصر عن المحتوى...</p>
+                                    <button class="read-more primary-btn">اقرأ المزيد</button>
+                                </div>
+                            </div>
+                            <!-- Repeat for other news cards -->
+                        </div>
+                        <div class="dashboard">
+                            <div class="dashboard-header">
+                                <div class="tab" id="tab1" data-category="violations">الانتهاكات</div>
+                                <div class="tab" id="tab2" data-category="crimes">الجرائم</div>
+                                <div class="tab" id="tab3" data-category="resistanceHarvest">حصاد المقاومة</div>
+                            </div>
+        
+                            <div class="content">
+                                <h2 class="content-header">الرسم البياني</h2>
+                                <p>مرحلة التطوير</p>
+                                <div class="chart-container">
+                                    <canvas id="myChart" width="800"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                             <!-- Latest bulletins -->
+        
+                             <div class="content-container">
+                                <!-- Card for New York City -->
+                                <div class="content-card">
+                                    <div class="swiper-content">
+                                        <div class="hero new-york">
+                                            <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" width="100%" height="100%"
+                                                alt="">
+                                            <div class="calendar">
+                                                <span class="date">
+                                                    27
+                                                </span>
+                                                <span class="month">
+                                                    MAR
+                                                </span>
+                                            </div>
+            
+                                        </div>
+                                        <div class="copy">
+                                            <h3>تقرير خاص: معركة طوفان الأقصى؛ تحليل إعلانات كتائب القسام خلال المعركة البرية، خلال
+                                                الفترة ما بين 26-10 حتى 30-12</h3>
+                                            <p>(874) إعلان لكتائب القسام عن العمليات التي نفذها مجاهدوها في كافة محاور التوغل خلال
+                                                المعركة البرية منها: (38) إعلان أكدت…
+            
+                                            </p>
+            
+                                            <a href="#" class="primary-btn">قراءة المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-card">
+                                    <div class="swiper-content">
+                                        <div class="hero new-york">
+                                            <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" width="100%" height="100%"
+                                                alt="">
+                                            <div class="calendar">
+                                                <span class="date">
+                                                    27
+                                                </span>
+                                                <span class="month">
+                                                    MAR
+                                                </span>
+                                            </div>
+            
+                                        </div>
+                                        <div class="copy">
+                                            <h3>تقرير خاص: معركة طوفان الأقصى؛ تحليل إعلانات كتائب القسام خلال المعركة البرية، خلال
+                                                الفترة ما بين 26-10 حتى 30-12</h3>
+                                            <p>(874) إعلان لكتائب القسام عن العمليات التي نفذها مجاهدوها في كافة محاور التوغل خلال
+                                                المعركة البرية منها: (38) إعلان أكدت…
+            
+                                            </p>
+            
+                                            <a href="#" class="primary-btn">قراءة المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-card">
+                                    <div class="swiper-content">
+                                        <div class="hero new-york">
+                                            <img src="https://dummyimage.com/900x500/d9d9d9/000000.png" width="100%" height="100%"
+                                                alt="">
+                                            <div class="calendar">
+                                                <span class="date">
+                                                    27
+                                                </span>
+                                                <span class="month">
+                                                    MAR
+                                                </span>
+                                            </div>
+            
+                                        </div>
+                                        <div class="copy">
+                                            <h3>تقرير خاص: معركة طوفان الأقصى؛ تحليل إعلانات كتائب القسام خلال المعركة البرية، خلال
+                                                الفترة ما بين 26-10 حتى 30-12</h3>
+                                            <p>(874) إعلان لكتائب القسام عن العمليات التي نفذها مجاهدوها في كافة محاور التوغل خلال
+                                                المعركة البرية منها: (38) إعلان أكدت…
+            
+                                            </p>
+            
+                                            <a href="#" class="primary-btn">قراءة المزيد</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Repeat for other cities like San Francisco and Chicago -->
+                            </div>
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <button id="prevMonth" class="btn  "><i class="fa-solid fa-arrow-right"></i> السابق</button>
+                                <h2 id="monthName">مارس </h2>
+                                <button id="nextMonth" class="btn  ">التالي <i class="fa-solid fa-arrow-left"></i></button>
+                            </div>
+                            <div class="calendar" id="calendar">
+                            </div>
+                            <!-- الجزء الجانبي لتفاصيل الحدث -->
+                            <div id="eventPanel" class="side-panel">
+                                <div class="side-panel-content">
+                                    <span id="closePanel" class="close-btn">&times;</span>
+                                    <div id="eventDetails"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="silder">
+                            <div class="owl-carousel owl-martyrs">
+                                <div class="item">
+                                    <img src="https://dummyimage.com/400x400/d9d9d9/000000.png" alt="Image 1">
+                                    <div class="overlay">
+                                        <h4>اسم الشهيد: محمود عبد الله</h4>
+                                        <p><strong>العمر:</strong> 30 سنة</p>
+                                        <p><strong>المدينة:</strong> المدينة</p>
+                                        <p class="martyrdom-date"><strong>تاريخ الاستشهاد:</strong> 15-03-2024</p>
+                                    </div>
+                                </div>
+                                <!-- قم بتكرار العنصر لكل صورة تريد عرضها -->
+                            </div>
+                        </div>
+                        <div class="slider-report">
+                            <div class="owl-carousel owl-report">
+                                <div class="report-item">
+                                    <img src="https://dummyimage.com/400x250/d9d9d9/000000.png" alt="Report Image">
+                                    <div class="category-tag">الفئة</div>
+                                    <div class="report-content">
+                                        <div class="report-date">
+                                            <i class="fa-regular fa-clock"></i>
+                                            31 ديسمبر, 2023
+        
+                                        </div>
+                                        <div class="report-title">عنوان التقرير</div>
+                                        <div class="report-description">محتوى التقرير أو وصف قصير للتقرير...</div>
+                                        <a href="link-to-full-report.html" class="read-more btn-primary primary-btn">اكمل
+                                            القراءة</a>
+                                    </div>
+                                </div>
+                                <!-- Repeat .report-item for each report -->
+                            </div>
+                        </div>
+                    </div>
+               
+                    <div class="col-md-3">
+                     
+                        
+                       
+                    </div>
+                
+                  
+                </div>
+            </div>
+        </main>
+        
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>التواصل</h3>
+                        <p>البريد الإلكتروني: example@example.com</p>
+                        <p>الهاتف: 123-456-7890</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="#">الرئيسية</a></li>
+                            <li><a href="https://palqura.com/">القرى الفلسطينية</a></li>
+                            <li><a href="https://www.shireen.ps/">مرصد شيرين</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>تابعونا</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="footer-bottom">
+                            <p>© 2024 حقوق النشر محفوظة | الموقع بواسطة <a href="#">اسمك</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </footer>
+        
+        
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <script src="js/fontawesome.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/config-chart.js"></script>
+        <script src="js/MapsData.js"></script>
+        <script src="js/drawMap.js"></script>
+        <script src="js/calendar.js"></script>
+
+        <script src="js/script.js"></script>
+
+    </body>
+
+</html>
