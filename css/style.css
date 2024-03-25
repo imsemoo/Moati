@@ -1332,7 +1332,6 @@ pattern as above, specifying full hierarchy for each nested level. */
   border-collapse: collapse;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden;
 }
 
 #eventsTable th,
@@ -1350,7 +1349,6 @@ pattern as above, specifying full hierarchy for each nested level. */
 
 .eventDescription {
   max-width: 250px;
-  /* التحكم في عرض الوصف */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1361,10 +1359,12 @@ pattern as above, specifying full hierarchy for each nested level. */
   color: white;
   border: none;
   cursor: pointer;
-  padding: 5px 10px;
-  /* تحديد الحشو لجعل الزر أكثر جاذبية */
-  border-radius: 5px;
-  /* مدور حواف الزر */
+  padding: 7px 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .table-responsive {
@@ -1376,6 +1376,7 @@ pattern as above, specifying full hierarchy for each nested level. */
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   margin-bottom: 50px;
+  overflow-x: auto; 
 }
 
 .tabes .dashboard-header {
@@ -1389,7 +1390,7 @@ pattern as above, specifying full hierarchy for each nested level. */
 #searchInput,
 #categoryFilter {
   padding: 10px;
-  margin-right: 5px;
+  margin-left: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
@@ -1461,4 +1462,116 @@ pattern as above, specifying full hierarchy for each nested level. */
 .slider-images .item {
   border-radius: 8px;
   overflow: hidden;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Base styles for images */
+.gallery-image {
+  width: 100%; /* Full width on mobile */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove inline display */
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+#image-gallery{
+  display: flex;
+    flex-flow: column;
+    grid-gap: 20px;
+}
+/* Styles for larger screens */
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+  #image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+
+  }
+
+  .gallery-image {
+    width: calc((100% - 40px) / 3); 
+   
+    margin: 0;
+  }
+
+}
+.pagination{
+  width: max-content;
+  margin: 20px auto;
+}
+
+#load-more{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: none;
+
+}
+
+.header-slider{
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  #filters_table {
+    display: flex;
+    flex-direction: column; /* Stack filter elements vertically */
+    align-items: center; /* Center-align the filter elements */
+    gap: 10px; /* Add some space between filter elements */
+  }
+
+  #filters_table input, #filters_table select, #filters_table button {
+    width: 100%; /* Full width for filter elements */
+    max-width: 300px; /* Limit the width to ensure they don't stretch too far on larger screens */
+  }
+
+  .eventDescription {
+    max-width: 200px; /* Limit the description width and allow text wrapping */
+    white-space: normal; /* Ensure descriptions can wrap */
+  }
+
+  table {
+    display: block;
+    width: 100%;
+  }
+
+  th, td {
+    white-space: nowrap; /* Keep content in table cells from wrapping */
+  }
+  .slider-images {
+    padding: 20px 0;}
 }

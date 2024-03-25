@@ -160,3 +160,59 @@ $(document).ready(function () {
   })
 
 });
+
+
+const images = [
+  "https://dummyimage.com/900x500/d9d9d9/000000.png",
+  "https://dummyimage.com/900x500/d9d9d9/000000.png",
+  "https://dummyimage.com/900x500/d9d9d9/000000.png",
+  "https://dummyimage.com/900x500/000000/d9d9d9.png",
+  "https://dummyimage.com/900x500/000000/d9d9d9.png",
+  "https://dummyimage.com/900x500/000000/d9d9d9.png",
+  "https://dummyimage.com/900x500/000000/d9d9d9.png",
+
+  // Add paths to your images
+];
+let currentPage = 0;
+
+function showImages() {
+  const gallery = document.getElementById('image-gallery');
+  gallery.innerHTML = ''; // Clear current images
+  const start = currentPage * 3;
+  const end = start + 3;
+  const imagesToShow = images.slice(start, end);
+
+  imagesToShow.forEach(imgSrc => {
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.className = 'gallery-image'; // Use class for styling
+    img.onclick = function() { openModal(imgSrc); };
+    gallery.appendChild(img);
+  });
+}
+
+
+function changePage(direction) {
+  currentPage += direction;
+  if (currentPage < 0) {
+    currentPage = 0;
+  } else if (currentPage * 3 >= images.length) {
+    currentPage = Math.ceil(images.length / 3) - 1;
+  }
+  showImages();
+}
+
+function openModal(imgSrc) {
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-image');
+  modal.style.display = 'block';
+  modalImg.src = imgSrc;
+
+  const span = document.getElementsByClassName('close')[0];
+  span.onclick = function() {
+    modal.style.display = 'none';
+  }
+}
+
+// Initially load images
+showImages();
